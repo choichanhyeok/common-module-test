@@ -1,4 +1,4 @@
-package payment;
+package common.payment;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
