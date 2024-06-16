@@ -1,4 +1,4 @@
-package common.payment;
+package common.payment.api.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
