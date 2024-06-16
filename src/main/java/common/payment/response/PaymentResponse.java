@@ -1,12 +1,19 @@
 package common.payment.response;
 
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
 public class PaymentResponse {
-    private String paymentStatus;
-    private String responseMessage;
+    private final String paymentStatus;
+    private final String responseMessage;
+
+    @JsonCreator
+    public PaymentResponse(@JsonProperty("paymentStatus") String paymentStatus,
+                           @JsonProperty("responseMessage") String responseMessage) {
+        this.paymentStatus = paymentStatus;
+        this.responseMessage = responseMessage;
+    }
 }

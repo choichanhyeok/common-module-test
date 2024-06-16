@@ -1,12 +1,21 @@
 package common.payment.request;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
 public class PaymentRequest {
-    private Long orderId;
-    private String customerId;
-    private double paymentAmount;
+    private final Long orderId;
+    private final String customerId;
+    private final double paymentAmount;
+
+    @JsonCreator
+    public PaymentRequest(@JsonProperty("orderId") Long orderId,
+                          @JsonProperty("customerId") String customerId,
+                          @JsonProperty("paymentAmount") double paymentAmount) {
+        this.orderId = orderId;
+        this.customerId = customerId;
+        this.paymentAmount = paymentAmount;
+    }
 }
