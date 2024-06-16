@@ -1,4 +1,4 @@
-package com.supermarket.common.payment.response;
+package common.payment.response;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

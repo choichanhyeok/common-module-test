@@ -1,4 +1,4 @@
-package com.supermarket.common.payment.response;
+package common.payment.response;
 
 public enum ResponseStatus {
     SUCCESS,

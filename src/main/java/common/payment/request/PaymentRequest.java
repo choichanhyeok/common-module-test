@@ -1,4 +1,4 @@
-package com.supermarket.common.payment.request;
+package common.payment.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
